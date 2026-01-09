@@ -13,7 +13,10 @@ jobs:
         with:
           name: 'Alpha'
       # Use the output from the `hello` step
+      - name: Adding 15s delay
+        run: sleep 15
       - name: Get the Output
         run: echo "The time was ${{ steps.hello.outputs.greeting }}"
+
 
 
